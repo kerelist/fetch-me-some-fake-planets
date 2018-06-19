@@ -5,6 +5,7 @@ import Table from './components/Table';
 import Pagination from './components/Pagination';
 import ResponsiveCellHeaders from './vendor/ResponsiveCellHeaders';
 import fetchData from './fetchData';
+import config from './config';
 
 class App extends Component {
   constructor(props) {
@@ -15,14 +16,18 @@ class App extends Component {
     };
   };
 
+  onSearchSubmit = (event, url) => {
+    event.preventDefault();
+    console.log(url);
+    fetchData(url, this.giveStatePageData)
+  };
 
   componentDidMount() {
     ResponsiveCellHeaders("Planets");
-  
-    fetchData('https://swapi.co/api/planets/', {}, this.giveStateInitialData);
+    fetchData(config.swapiUrl, this.giveStatePageData);
   };
 
-  giveStateInitialData = (data) => {
+  giveStatePageData = (data) => {
     this.setState({
       planets: data
     });
@@ -36,7 +41,7 @@ class App extends Component {
           <p>Insert Star Wars reference here</p>
           <p className="small strike">I've never seen Star Wars, please don't hold it against me</p>
         </header>
-        <Search />
+        <Search onSearchSubmit={this.onSearchSubmit} />
         <h2 className="sr-only">Planets of Star Wars</h2>
         <Table />
         <Pagination />

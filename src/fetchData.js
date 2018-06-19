@@ -1,6 +1,5 @@
-const fetchData = (url, params, doOnComplete) => {
-  params = params !== undefined ? params : {};
-  fetch(url, params)
+const fetchData = (url, doOnComplete) => {
+  fetch(url)
   .then(function(response) {
     return response.json();
   })
