@@ -1,0 +1,66 @@
+.Pagination {
+  width: calc(100% - 20px);
+  text-align: right;
+  margin: 10px;
+}
+
+.Pagination button,
+.Pagination span {
+  background-color: transparent;
+  border: 0;
+  font-size: 1em;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.number,
+.arrow {
+  position: relative;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.number.active,
+.number:hover,
+.number:focus,
+.arrow:hover,
+.arrow:focus{
+  background-color: #E4E8F1;
+  color: #000000;
+}
+
+.first:hover,
+.last:hover,
+.first:focus,
+.last:focus {
+  text-decoration: underline;
+}
+
+.arrow {
+  height: 25px;
+  width: 25px;
+}
+
+.next:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 2.5px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8.7px;
+  border-color: transparent transparent transparent #000000;
+}
+
+.previous:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  right: calc(50% - 2.5px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 8.7px 5px 0;
+  border-color: transparent #000000 transparent transparent;
+}

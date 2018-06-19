@@ -34,3 +34,8 @@ For the project to build, **these files must exist with exact filenames**:
 
 * `public/index.html` is the page template;
 * `src/index.js` is the JavaScript entry point.
+
+## Thanks
+
+Thanks for the accessible/responsive table code, Adrian Roselli! 
+http://adrianroselli.com/2017/11/a-responsive-accessible-table.html

@@ -1,0 +1,9 @@
+.table-row td {
+  padding: 20px 10px;
+}
+
+@media screen and (max-width: 750px), print and (max-width: 5in) {
+  .table-row td {
+    padding: 10px;
+  }
+}
