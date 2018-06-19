@@ -37,5 +37,5 @@ For the project to build, **these files must exist with exact filenames**:
 
 ## Thanks
 
-Thanks for the accessible/responsive table code, Adrian Roselli! 
+Adrian Roselli for accessible & responsive tables @
 http://adrianroselli.com/2017/11/a-responsive-accessible-table.html
