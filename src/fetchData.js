@@ -5,8 +5,10 @@ const fetchData = (url, doOnComplete) => {
   })
   .then(function(myJson) {
     console.log(myJson);
-    doOnComplete(myJson);
-  });
+    if (typeof doOnComplete === 'function') {
+      doOnComplete(myJson);
+    }
+  })
 }
 
 export default fetchData;
