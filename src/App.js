@@ -12,14 +12,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      planets: {}
+      loaded: false
     };
-  };
-
-  onSearchSubmit = (event, url) => {
-    event.preventDefault();
-    console.log(url);
-    fetchData(url, this.giveStatePageData)
   };
 
   componentDidMount() {
@@ -28,9 +22,18 @@ class App extends Component {
   };
 
   giveStatePageData = (data) => {
+    const state = this.state;
     this.setState({
-      planets: data
+      ...state,
+      ...data,
+      loaded: true
     });
+  };
+
+  onSearchSubmit = (event, url) => {
+    event.preventDefault();
+    console.log(url);
+    fetchData(url, this.giveStatePageData)
   };
 
   render() {
@@ -43,7 +46,7 @@ class App extends Component {
         </header>
         <Search onSearchSubmit={this.onSearchSubmit} />
         <h2 className="sr-only">Planets of Star Wars</h2>
-        <Table />
+        <Table loaded={this.state.loaded} planets={this.state.results} />
         <Pagination />
         <footer>
           <p>Search icon used under Creative Commons, made by Cris Wong at <a href="https://thenounproject.com/search/?q=search&i=1783934" target="_blank" rel="noopener noreferrer">The Noun Project</a></p>

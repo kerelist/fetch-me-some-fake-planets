@@ -16,7 +16,13 @@ class Table extends Component {
             <th>Terrain</th>
             <th>Films</th>
           </tr>
-          <TableCells />
+          {
+            this.props.loaded &&
+            this.props.planets &&
+            this.props.planets.map((planet) => (
+              <TableCells planet={planet} />
+            ))
+          }
           <tr>
             <td></td>
             <td></td>
