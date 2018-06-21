@@ -7,7 +7,6 @@ const fetchData = async (url, doOnComplete) => {
 
     //this runs an async function that runs a loop through the results array
     return getFilmsDataObjects(data).then(function() {
-      console.log(data);
       //return data object that now has individual films' data objects replacing original API URLs
       return data;
     });

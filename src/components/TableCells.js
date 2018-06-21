@@ -5,7 +5,6 @@ class TableCells extends Component {
   render() {
     
     const planet = this.props.planet;
-    console.log(planet.films);
     
     return (
       <tr className="table-row">
@@ -18,7 +17,7 @@ class TableCells extends Component {
         <td>
           {
             planet.films.map((film) => (
-              <a className="film-links" href={film.url}>{film.title}</a>
+              <a className="film-link" href={film.url}>{film.title}</a>
             ))
           }
         </td>
