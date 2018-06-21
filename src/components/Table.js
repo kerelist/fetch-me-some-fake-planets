@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 import './Table.css';
 import TableCells from './TableCells';
 
@@ -46,7 +47,7 @@ class Table extends Component {
             !this.props.error.status &&
             this.props.planets &&
             this.props.planets.map((planet) => (
-              <TableCells planet={planet} />
+              <TableCells key={uuid.v4()} planet={planet} />
             ))
           }
           <tr>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import abbreviate from 'number-abbreviate';
+import uuid from 'uuid';
 import './TableCells.css';
 
 class TableCells extends Component {
@@ -30,7 +31,7 @@ class TableCells extends Component {
           <div>
           {
             planet.films.map((film) => (
-              <a className="table-link" href={film.url}>{film.title}</a>
+              <a className="table-link" key={uuid.v4()} href={film.url}>{film.title}</a>
             ))
           }
           </div>
