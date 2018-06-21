@@ -17,7 +17,33 @@ class Table extends Component {
             <th>Films</th>
           </tr>
           {
+            !this.props.loaded &&
+            !this.props.error.status &&
+            <tr>
+              <td className="single-cell">
+                <div className="loadingContainer">
+                  {/* animation courtesy of https://codepen.io/candrews/pen/KzJJmz ! (I did not make it but I like it) */}
+                    <div className="loader">
+                      <span className="dot dot_1"></span>
+                      <span className="dot dot_2"></span>
+                      <span className="dot dot_3"></span>
+                      <span className="dot dot_4"></span>
+                    </div>
+                </div>
+              </td>
+            </tr>
+          }
+          {
+            this.props.error.status &&
+            <tr>
+              <td className="single-cell">
+                <p>{this.props.error.message}</p>
+              </td>
+            </tr>
+          }
+          {
             this.props.loaded &&
+            !this.props.error.status &&
             this.props.planets &&
             this.props.planets.map((planet) => (
               <TableCells planet={planet} />

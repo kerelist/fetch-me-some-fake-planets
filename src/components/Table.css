@@ -24,6 +24,78 @@
   height: 15px;
 }
 
+.loadingContainer {
+  padding: 20px 10px;
+}
+
+.loader { 
+  position: relative; 
+  width: calc(18px * 3 + 12px);
+  height: 12px; 
+  margin: 18px auto; 
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: calc(12px * 0.5);
+  background: #ccc;
+  position: absolute;
+}
+
+.dot_1 {
+  animation: animateDot1 1.5s linear infinite;
+  left: 18px;
+  background: #1DB2D4; 
+}
+
+.dot_2 {
+  animation: animateDot2 1.5s linear infinite;
+  animation-delay: calc(1.5s / 3);
+  left: cals(18px * 2);
+}
+
+.dot_3 {
+  animation: animateDot3 1.5s linear infinite;
+  left: 18px;
+}
+
+.dot_4 {
+  animation: animateDot4 1.5s linear infinite;
+  animation-delay: calc(1.5s / 3);
+  left: calc(18px * 2);
+}
+
+@keyframes animateDot1 {
+  0%{ transform: rotate(0deg) translateX(-18px); }
+  25% { transform: rotate(180deg) translateX(-18px); }
+  75% { transform: rotate(180deg) translateX(-18px); }
+  100% { transform: rotate(360deg) translateX(-18px); }
+}
+
+@keyframes animateDot2 {
+  0%{ transform: rotate(-0deg) translateX(-18px); }
+  25% { transform: rotate(-180deg) translateX(-18px); }
+  75% { transform: rotate(-180deg) translateX(-18px); }
+  100% { transform: rotate(-360deg) translateX(-18px); }
+}
+
+@keyframes animateDot3 {
+  0%{ transform: rotate(0deg) translateX(18px); }
+  25% { transform: rotate(180deg) translateX(18px); }
+  75% { transform: rotate(180deg) translateX(18px); }
+  100% { transform: rotate(360deg) translateX(18px); }
+}
+
+@keyframes animateDot4 {
+  0%{ transform: rotate(-0deg) translateX(18px); }
+  25% { transform: rotate(-180deg) translateX(18px); }
+  75% { transform: rotate(-180deg) translateX(18px); }
+  100% { transform: rotate(-360deg) translateX(18px); }
+}
+
+
 
 /* from http://adrianroselli.com/2017/11/a-responsive-accessible-table.html */
 td::before {

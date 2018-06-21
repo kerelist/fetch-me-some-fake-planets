@@ -5,10 +5,27 @@ const fetchData = async (url, doOnComplete) => {
   })
   .then(function(data) {
 
+    //check for null response
+    if (data.count === 0) {
+      return {
+        error: {
+          status: true,
+          message: 'There are no results for this query'
+        }
+      }
+    }
+
     //this runs an async function that runs a loop through the results array
     return getFilmsDataObjects(data).then(function() {
       //return data object that now has individual films' data objects replacing original API URLs
-      return data;
+      return {
+        ...data,
+        // since we have data, set errors back to false
+        error: {
+          status: false,
+          message:''
+        }
+      };
     });
 
   })
