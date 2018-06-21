@@ -16,9 +16,9 @@ class TableCells extends Component {
         <td>{planet.terrain}</td>
         <td>
           {
-            // planet.films.map(film => (
-              // <a href={film.url}>{film.title}</a>
-            // ))
+            planet.films.map((film) => (
+              <a className="film-link" href={film.url}>{film.title}</a>
+            ))
           }
         </td>
       </tr>
