@@ -5,8 +5,13 @@ import TableCells from './TableCells';
 
 class Table extends Component {
   render() {
+
+    //labelling message for aria
+    const getTableTitleText = () => this.props.loaded ? 'planet results have been loaded.' : 'planet results are loading.';
+
     return (
-      <table id="Planets" className="table">
+      <table id="Planets" className="table" aria-labelledby="TableTitle">
+        <caption className="sr-only" id="TableTitle">{getTableTitleText()}</caption>
         <tbody>
           <tr>
             <th>Name</th>

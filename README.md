@@ -1,4 +1,4 @@
-# fetch-me-some-fake-planets
+# Fetch Me Some Fake Planets
 Exercise retrieving and sorting planet data from the SWAPI
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -11,10 +11,8 @@ To build for production, run `npm run build`
 
 ## Folder Structure
 
-After creation, your project should look like this:
-
 ```
-my-app/
+app/
   README.md
   node_modules/
   package.json
@@ -22,12 +20,25 @@ my-app/
     index.html
     favicon.ico
   src/
+    components/
+      Pagination.css
+      Pagination.js
+      Search.css
+      Search.js
+      Table.css
+      Table.js
+      TableCells.css
+      TableCells.js
+    vendor/
+      ResponsiveCellHeaders.js
     App.css
     App.js
-    App.test.js
+    config.js
+    fetchData.js
     index.css
     index.js
     logo.svg
+    mag-grey.svg
 ```
 
 For the project to build, **these files must exist with exact filenames**:

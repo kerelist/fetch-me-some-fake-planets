@@ -148,6 +148,7 @@ class App extends Component {
         }
         <footer>
           <p>Search icon used under Creative Commons, made by Cris Wong at <a href="https://thenounproject.com/search/?q=search&i=1783934" target="_blank" rel="noopener noreferrer">The Noun Project</a></p>
+          <p>Saturn favicon made by Aha-Soft, retrievable at <a href="http://www.iconarchive.com/show/space-icons-by-aha-soft/Saturn-icon.html" target="_blank" rel="noopener noreferrer">Icon Archive</a></p>
         </footer>
       </div>
     );
