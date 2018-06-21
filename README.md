@@ -1,5 +1,5 @@
 # Fetch Me Some Fake Planets
-Exercise retrieving and sorting planet data from the SWAPI
+Exercise retrieving and sorting planet data from the SWAPI. Viewable at http://andreakereliuk.com/fetch-swapi/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
