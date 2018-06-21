@@ -4,6 +4,7 @@ import TableCells from './TableCells';
 
 class Table extends Component {
   render() {
+    console.log(this.props.loaded);
     return (
       <table id="Planets" className="table">
         <tbody>
